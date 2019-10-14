@@ -30,7 +30,7 @@ var displayfilms = function(films)
            .remove()
        
         return displaydescription(d)
-        }
+        })
 
         }
 
@@ -56,8 +56,13 @@ var displayfilms = function(films)
 }
   var displaydescription = function(film)
   {
-      console.log("film", film)
-      d3.select("#gib3")
-      .append("div")
-      .text(film.description)
+   var details =   d3.select("#gib3")
+      details.append("p")
+      .text("Description: " +film.description)
+      details.append("p")
+      .text("Director:"+film.director)
+      details.append("p")
+      .text("Producer:" +film.producer)
+      details.append("p")
+      .text("Release Date:" +film.release_date)
   }
