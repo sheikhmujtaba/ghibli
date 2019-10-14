@@ -1,8 +1,23 @@
+body{
+    background-color: 96C5A5;
+}
+h1{
+    background-color: 073B66;
+    color: E76354;
+    font-size: 42px;
+    font-style: italic;
+    text-align: center;
+}
 #gib{
    border: solid;
+    border-color: 13788C;
     width: 300px;
     float: left;
+    color: E76354; 
+    background-color: 073B66;
 }
 #gib3{
-    color: maroon;
+    color: E76354;
+    border: dotted;
+    background-color: 13788C;
 }

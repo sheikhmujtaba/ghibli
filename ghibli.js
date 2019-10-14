@@ -2,7 +2,7 @@ var filmPromise = d3.json("https://ghibliapi.herokuapp.com/films")
 filmPromise.then(function(films)
 {
     d3.select("h1")
-    .text("Select film")
+    .text("Select A Film")
 console.log("film", films);
     displayfilms(films)
     
