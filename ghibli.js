@@ -5,7 +5,7 @@ filmPromise.then(function(films)
     .text("Select film")
 console.log("film", films);
     displayfilms(films)
-    displaydescription(films)
+    
 },
 function(err)
 {
@@ -25,10 +25,16 @@ var displayfilms = function(films)
          {
        return d.title
    })
+    .on("click", function(d){
+           d3.selectAll("#gib3 *")
+           .remove()
+       
+        return displaydescription(d)
+        }
 
-}
+        }
 
-  var displaydescription = function(films)
+  var displayalldescription = function(films)
 {
    var box = 
     d3.select("#gib2")
@@ -48,3 +54,10 @@ var displayfilms = function(films)
         return d.title
     })
 }
+  var displaydescription = function(film)
+  {
+      console.log("film", film)
+      d3.select("#gib3")
+      .append("div")
+      .text(film.description)
+  }
